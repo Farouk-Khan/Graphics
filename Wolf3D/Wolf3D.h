@@ -6,7 +6,7 @@
 /*   By: fkhan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/08 16:37:40 by fkhan             #+#    #+#             */
-/*   Updated: 2018/09/19 12:18:50 by fkhan            ###   ########.fr       */
+/*   Updated: 2018/09/23 23:12:44 by fkhan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,23 @@
 # include <math.h>
 # define WIDTH 1000
 # define HEIGHT 500
+# define MOVE 0.5
+# define ROT 0.1
+
+/*typedef struct 	s_map
+{
+	float		dx;
+	float		dy;
+	float		step;
+	int			i;
+	float		j;
+	void 		*mlx;
+	void		*win;
+	int			y;
+	char		***map;
+	char		*line;
+	int			fd;
+}				t_map;*/
 
 typedef struct	s_pos
 {
@@ -50,10 +67,22 @@ typedef struct	s_pos
 	int			drawEnd;
 	int			colour;
 	int			x;
+	int			moveUp;
+	float		dx;
+	float		dy;
+	float		step;
+	int			i;
+	float		j;
+	void 		*mlx;
+	void		*win;
+	int			y;
+	char		***map;
+	char		*line;
+	int			fd;
 
 }				t_pos;
 
-typedef struct 	s_map
+/*typedef struct 	s_map
 {
 	float		dx;
 	float		dy;
@@ -67,5 +96,5 @@ typedef struct 	s_map
 	char		*line;
 	int			fd;
 }				t_map;
-
+*/
 #endif
